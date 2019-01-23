@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+  <b class="navbar-brand">{{ title }}</b>
+  <button class="navbar-toggler hidden-sm-up" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbar">
+    <ul class="navbar-nav mr-auto">
+      <a *ngIf="gitHubLink" class="nav-link" target="blank" [href]="gitHubLink">Github</a>
+      <a *ngIf="npmLink" class="nav-link" target="blank"  [href]="npmLink">NPM</a>
+    </ul>
+    <span class="navbar-text">
+      <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+        <button class="btn btn-outline-primary btn-light" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">v1.0.0</button>
+        <div ngbDropdownMenu>
+          <button class="dropdown-item">v2.0.0</button>
+          <button class="dropdown-item">v1.0.0</button>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </span>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-5 col-md-4 col-lg-3 col-xl-2 border-right" style="padding-top: 50px;">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a *ngFor="let page of pages" class="nav-link" [routerLink]="page.path" routerLinkActive="active">{{ page.data.name }}</a>
+        </div>
+    </div>
+    <div class="col" style="padding-top: 50px;">
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>
