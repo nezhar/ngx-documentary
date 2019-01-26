@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { pages, config } from '../app.config';
 
 @Component({
@@ -14,4 +15,7 @@ export class AppComponent {
   npmLink = config.npmLink;
 
   pages = pages;
+
+  constructor(public router: Router) {
+  }
 }

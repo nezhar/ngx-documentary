@@ -23,12 +23,28 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-5 col-md-4 col-lg-3 col-xl-2 border-right" style="padding-top: 50px;">
-        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <a *ngFor="let page of pages" class="nav-link" [routerLink]="page.path" routerLinkActive="active">{{ page.data.name }}</a>
+    <div class="col-12 col-md-4 col-lg-3 col-xl-2 pt-3 pt-md-4">
+      <nav class="d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item nav-pills" *ngFor="let page of pages">
+              <a class="nav-link" [routerLink]="page.path" routerLinkActive="active">
+                {{ page.data.name }}
+              </a>
+              {{ router.path }}
+              <ul class="nav flex-column" *ngIf="router.url.indexOf(page.path) > -1">
+                <li class="nav-item nav-pills" *ngFor="let fragment of page.data.fragments">
+                  <a class="nav-link" [routerLink]="page.path" [fragment]="fragment.ref">
+                    {{ fragment.name }}
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
+      </nav>
     </div>
-    <div class="col" style="padding-top: 50px;">
+    <div class="col pt-3 pt-md-4">
         <router-outlet></router-outlet>
       </div>
   </div>

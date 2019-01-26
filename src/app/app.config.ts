@@ -30,7 +30,17 @@ export const pages: Routes = [
     path: 'component',
     component: ComponentComponent,
     data: {
-      name: 'Component'
+      name: 'Components',
+      fragments: [
+        {
+          name: 'Component 1',
+          ref: 'component1',
+        },
+        {
+          name: 'Component 2',
+          ref: 'component2',
+        },
+      ]
     }
   },
   {
