@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "documentary": {
+      "root": "projects/documentary",
+      "sourceRoot": "projects/documentary/src",
+      "projectType": "library",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/documentary/tsconfig.lib.json",
+            "project": "projects/documentary/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/documentary/src/test.ts",
+            "tsConfig": "projects/documentary/tsconfig.spec.json",
+            "karmaConfig": "projects/documentary/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/documentary/tsconfig.lib.json",
+              "projects/documentary/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-documentary"
