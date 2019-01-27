@@ -56,5 +56,20 @@ export const config: DocumentaryConfig = {
         name: 'Contribute'
       }
     },
+  ],
+  currentVersion: '1.0.0',
+  versions: [
+    {
+      'href': '/3.0.0',
+      'name': '3.0.0',
+    },
+    {
+      'href': '/2.0.0',
+      'name': '2.0.0',
+    },
+    {
+      'href': '/1.0.0',
+      'name': '1.0.0',
+    },
   ]
 };

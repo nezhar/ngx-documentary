@@ -16,4 +16,6 @@ export interface DocumentaryConfig {
     title: string;
     links: DocumentaryLink[];
     routes: DocumentaryRoute[];
+    currentVersion?: string;
+    versions?: DocumentaryLink[];
 }

@@ -7,14 +7,16 @@
     <ul class="navbar-nav mr-auto">
       <a *ngFor="let link of config.links" class="nav-link" target="blank" [href]="link.href">{{ link.name }}</a>
     </ul>
-    <span class="navbar-text">
-      <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
-        <button class="btn btn-outline-primary btn-light" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">v1.0.0</button>
+    <span *ngIf="config.currentVersion">
+      <div class="d-inline-block dropdown" ngbDropdown #myDrop="ngbDropdown" *ngIf="config.versions.length">
+        <button class="btn btn-outline-primary btn-light" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">{{ config.currentVersion }}</button>
         <div ngbDropdownMenu>
-          <button class="dropdown-item">v2.0.0</button>
-          <button class="dropdown-item">v1.0.0</button>
+          <a *ngFor="let version of config.versions" [href]="version.href" class="dropdown-item">{{ version.name }}</a>
         </div>
       </div>
+      <h4 *ngIf="!config.versions.length">
+        <span class="badge badge-secondary">{{ config.currentVersion }}</span>
+      </h4>
     </span>
   </div>
 </nav>
