@@ -1,20 +1,15 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { pages, config } from '../app.config';
+import { config } from './app.config';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: '<ngx-documentary [config]="config"></ngx-documentary>',
 })
 export class AppComponent {
   isNavbarCollapsed = true;
 
-  title = config.title;
-  gitHubLink = config.gitHubLink;
-  npmLink = config.npmLink;
-
-  pages = pages;
+  config = config;
 
   constructor(public router: Router) {
   }

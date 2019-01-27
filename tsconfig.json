@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "documentary": [
-        "dist/documentary"
+      "ngx-documentary": [
+        "dist/ngx-documentary"
       ],
-      "documentary/*": [
-        "dist/documentary/*"
+      "ngx-documentary/*": [
+        "dist/ngx-documentary/*"
       ]
     }
   }

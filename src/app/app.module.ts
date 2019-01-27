@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrismModule } from '@ngx-prism/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './layout/app.component';
+import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { InstallComponent } from './pages/install/install.component';
 import { ContributeComponent } from './pages/contribute/contribute.component';
@@ -21,7 +20,15 @@ import 'prismjs/components/prism-css';
 import 'prismjs/components/prism-sass';
 import 'prismjs/components/prism-scss';
 
+import { DocumentaryModule } from 'ngx-documentary';
+
 @NgModule({
+  imports: [
+    BrowserModule,
+    NgbModule,
+    PrismModule,
+    DocumentaryModule,
+  ],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -29,11 +36,11 @@ import 'prismjs/components/prism-scss';
     ContributeComponent,
     ComponentComponent,
   ],
-  imports: [
-    BrowserModule,
-    NgbModule,
-    PrismModule,
-    AppRoutingModule,
+  entryComponents: [
+    HomeComponent,
+    InstallComponent,
+    ContributeComponent,
+    ComponentComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

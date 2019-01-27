@@ -1,12 +1,11 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-  <b class="navbar-brand">{{ title }}</b>
+  <b class="navbar-brand">{{ config.title }}</b>
   <button class="navbar-toggler hidden-sm-up" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbar">
     <ul class="navbar-nav mr-auto">
-      <a *ngIf="gitHubLink" class="nav-link" target="blank" [href]="gitHubLink">Github</a>
-      <a *ngIf="npmLink" class="nav-link" target="blank"  [href]="npmLink">NPM</a>
+      <a *ngFor="let link of config.links" class="nav-link" target="blank" [href]="link.href">{{ link.name }}</a>
     </ul>
     <span class="navbar-text">
       <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
@@ -16,7 +15,6 @@
           <button class="dropdown-item">v1.0.0</button>
         </div>
       </div>
-      <router-outlet></router-outlet>
     </span>
   </div>
 </nav>
@@ -27,14 +25,13 @@
       <nav class="d-md-block bg-light sidebar">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
-            <li class="nav-item nav-pills" *ngFor="let page of pages">
-              <a class="nav-link" [routerLink]="page.path" routerLinkActive="active">
-                {{ page.data.name }}
+            <li class="nav-item nav-pills" *ngFor="let route of config.routes">
+              <a class="nav-link" [routerLink]="route.path" routerLinkActive="active">
+                {{ route.data.name }}
               </a>
-              {{ router.path }}
-              <ul class="nav flex-column" *ngIf="router.url.indexOf(page.path) > -1">
-                <li class="nav-item nav-pills" *ngFor="let fragment of page.data.fragments">
-                  <a class="nav-link" [routerLink]="page.path" [fragment]="fragment.ref">
+              <ul class="nav flex-column" *ngIf="router.url.indexOf(route.path) > -1">
+                <li class="nav-item nav-pills" *ngFor="let fragment of route.data.fragments">
+                  <a class="nav-link" [routerLink]="route.path" [fragment]="fragment.href">
                     {{ fragment.name }}
                   </a>
                 </li>
