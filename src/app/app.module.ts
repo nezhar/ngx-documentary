@@ -4,10 +4,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrismModule } from '@ngx-prism/core';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
 import { InstallComponent } from './pages/install/install.component';
-import { ContributeComponent } from './pages/contribute/contribute.component';
-import { ComponentComponent } from './pages/component/component.component';
+import { SampleComponent } from './pages/sample/sample.component';
 
 import 'prismjs/plugins/toolbar/prism-toolbar';
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
@@ -31,16 +30,14 @@ import { DocumentaryModule } from 'ngx-documentary';
   ],
   declarations: [
     AppComponent,
-    HomeComponent,
+    AboutComponent,
     InstallComponent,
-    ContributeComponent,
-    ComponentComponent,
+    SampleComponent,
   ],
   entryComponents: [
-    HomeComponent,
+    AboutComponent,
     InstallComponent,
-    ContributeComponent,
-    ComponentComponent,
+    SampleComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

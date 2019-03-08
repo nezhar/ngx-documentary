@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "typedoc": "typedoc"
   },
   "private": true,
   "dependencies": {
@@ -19,15 +20,19 @@
     "@angular/platform-browser": "~7.2.2",
     "@angular/platform-browser-dynamic": "~7.2.2",
     "@angular/router": "~7.2.2",
+    "@compodoc/compodoc": "^1.1.7",
+    "@microsoft/tsdoc": "^0.12.5",
     "@ng-bootstrap/ng-bootstrap": "^4.0.1",
     "@ngx-prism/core": "^2.0.1",
     "@types/prismjs": "^1.9.0",
     "bootstrap": "^4.2.1",
     "core-js": "^2.6.3",
+    "file-system": "^2.2.2",
     "lodash-es": "^4.17.11",
     "prismjs": "^1.9.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
+    "typedoc": "^0.14.2",
     "zone.js": "~0.8.29"
   },
   "devDependencies": {

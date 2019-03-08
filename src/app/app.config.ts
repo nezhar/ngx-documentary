@@ -1,7 +1,6 @@
-import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
 import { InstallComponent } from './pages/install/install.component';
-import { ContributeComponent } from './pages/contribute/contribute.component';
-import { ComponentComponent } from './pages/component/component.component';
+import { SampleComponent } from './pages/sample/sample.component';
 import { DocumentaryConfig } from 'ngx-documentary';
 
 
@@ -9,20 +8,20 @@ export const config: DocumentaryConfig = {
   title: 'ngx-documentary',
   links: [
     {
-      'href': 'https://github.com/',
+      'href': 'https://github.com/nezhar/ngx-documentary',
       'name': 'Github',
     },
     {
-      'href': 'https://www.npmjs.com/',
+      'href': 'https://www.npmjs.com/package/ngx-documentary',
       'name': 'NPM',
     },
   ],
   routes: [
     {
-      path: 'home',
-      component: HomeComponent,
+      path: 'about',
+      component: AboutComponent,
       data: {
-        name: 'Home'
+        name: 'About'
       }
     },
     {
@@ -33,10 +32,10 @@ export const config: DocumentaryConfig = {
       }
     },
     {
-      path: 'component',
-      component: ComponentComponent,
+      path: 'sample',
+      component: SampleComponent,
       data: {
-        name: 'Components',
+        name: 'Sample docs',
         fragments: [
           {
             name: 'Component 1',
@@ -46,30 +45,14 @@ export const config: DocumentaryConfig = {
             name: 'Component 2',
             href: 'component2',
           },
+          {
+            name: 'Component 3',
+            href: 'component3',
+          },
         ]
       }
-    },
-    {
-      path: 'contribute',
-      component: ContributeComponent,
-      data: {
-        name: 'Contribute'
-      }
-    },
+    }
   ],
   currentVersion: '1.0.0',
-  versions: [
-    {
-      'href': '/3.0.0',
-      'name': '3.0.0',
-    },
-    {
-      'href': '/2.0.0',
-      'name': '2.0.0',
-    },
-    {
-      'href': '/1.0.0',
-      'name': '1.0.0',
-    },
-  ]
+  versions: []
 };

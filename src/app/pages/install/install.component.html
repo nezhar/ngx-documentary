@@ -1,5 +1,4 @@
 <h2>Installation</h2>
-
 <p>
   You can install the library using you favorite package manager:
 </p>
@@ -9,3 +8,40 @@
 
 <h5>yarn</h5>
 <ngx-prism [language]="'bash'" code='yarn add ngx-documentary'></ngx-prism>
+
+<p class="mt-3">You can now add the module</p>
+
+<div class="mt-3">
+  <ngb-tabset>
+    <ngb-tab title="app.module.ts">
+      <ng-template ngbTabContent>
+        <ngx-prism [language]="'typescript'" [code]='module'>
+        </ngx-prism>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+
+  <ngb-tabset>
+    <ngb-tab title="app.component.ts">
+      <ng-template ngbTabContent>
+        <ngx-prism [language]="'typescript'" [code]='component'>
+        </ngx-prism>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
+
+<h2 class="mt-3">Configuration</h2>
+
+<p>Create the <b>app.config.ts</b> file the <i>src/app</i> folder.</p>
+
+<div class="mt-3">
+  <ngb-tabset>
+    <ngb-tab title="app.config.ts">
+      <ng-template ngbTabContent>
+        <ngx-prism [language]="'typescript'" [code]='config'>
+        </ngx-prism>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
