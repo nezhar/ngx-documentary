@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { DocumentaryComponent } from './documentary.component';
 import { DocumentaryRoutingModule } from './documentary.routing';
@@ -13,6 +14,7 @@ import { DocumentaryRoutingModule } from './documentary.routing';
   imports: [
     CommonModule,
     NgbModule,
+    ScrollToModule.forRoot(),
     DocumentaryRoutingModule,
   ],
   exports: [

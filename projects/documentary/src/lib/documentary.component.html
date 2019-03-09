@@ -33,7 +33,7 @@
               </a>
               <ul class="nav flex-column" *ngIf="router.url.indexOf(route.path) > -1">
                 <li class="nav-item nav-pills" *ngFor="let fragment of route.data.fragments">
-                  <a class="nav-link" [routerLink]="route.path" [fragment]="fragment.href">
+                  <a class="nav-link" [routerLink]="route.path" [fragment]="fragment.href" [ngx-scroll-to]="fragment.href">
                     {{ fragment.name }}
                   </a>
                 </li>

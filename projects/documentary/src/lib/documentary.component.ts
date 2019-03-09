@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, Input, AfterContentInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
+import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
 
 import { DocumentaryConfig } from './documentary.config';
 
@@ -9,13 +11,15 @@ import { DocumentaryConfig } from './documentary.config';
   templateUrl: './documentary.component.html',
   styleUrls: ['./documentary.component.scss']
 })
-export class DocumentaryComponent implements OnInit {
+export class DocumentaryComponent implements OnInit, AfterContentInit {
 
   @Input() config: DocumentaryConfig;
 
   isNavbarCollapsed = true;
 
-  constructor(public router: Router) {
+  constructor(public router: Router,
+              private activeRoute: ActivatedRoute,
+              private scrollToService: ScrollToService) {
   }
 
   ngOnInit() {
@@ -28,6 +32,16 @@ export class DocumentaryComponent implements OnInit {
         path: '',
         redirectTo: this.config.routes[0].path,
         pathMatch: 'full'
+      });
+    }
+  }
+
+  ngAfterContentInit() {
+    const fragment: string = this.activeRoute.snapshot.fragment;
+
+    if (fragment) {
+      this.scrollToService.scrollTo({
+        target: fragment
       });
     }
   }
