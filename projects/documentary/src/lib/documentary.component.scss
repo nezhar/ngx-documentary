@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
 .nav-item {
   .nav-item a {
       padding-left: 2rem;
@@ -6,4 +8,12 @@
 
 .nav-pills .nav-link {
   border-radius: 0;
+}
+
+@include media-breakpoint-up(md) {
+  .docs-body {
+    max-height: calc(100vh - 56px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
 }

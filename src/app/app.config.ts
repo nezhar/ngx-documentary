@@ -53,6 +53,6 @@ export const config: DocumentaryConfig = {
       }
     }
   ],
-  currentVersion: '1.0.0',
+  currentVersion: '0.1.0',
   versions: []
 };
