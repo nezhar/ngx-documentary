@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrismModule } from '@ngx-prism/core';
 
@@ -27,6 +28,7 @@ import { DocumentaryModule } from 'ngx-documentary';
     NgbModule,
     PrismModule,
     DocumentaryModule,
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,

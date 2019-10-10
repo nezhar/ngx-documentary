@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  versionsUrl: 'https://nezhar.github.io/ngx-documentary/versions.json',
 };
