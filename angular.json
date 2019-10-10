@@ -58,9 +58,14 @@
               "projects/documentary-demo/src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/scss/bootstrap.scss",
+              "./node_modules/prismjs/themes/prism-okaidia.css",
+              "./node_modules/prismjs/plugins/toolbar/prism-toolbar.css",
               "projects/documentary-demo/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/prismjs/prism.js"
+            ]
           },
           "configurations": {
             "production": {

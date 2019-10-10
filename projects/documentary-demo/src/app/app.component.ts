@@ -1,16 +1,16 @@
-import { Component } from '@angular/core';
-import { config } from './app.config';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { config } from './app.config';
 import { DocumentaryLink } from 'ngx-documentary/ngx-documentary';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
   template: '<ngx-documentary [config]="config"></ngx-documentary>',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   config = config;
-  
+
   constructor(private http: HttpClient) {
   }
 
