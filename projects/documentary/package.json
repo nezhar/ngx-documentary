@@ -1,9 +1,9 @@
 {
   "name": "ngx-documentary",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "peerDependencies": {
-    "@angular/common": "^8.2.0",
-    "@angular/core": "^8.2.0",
+    "@angular/common": "^9.0.0",
+    "@angular/core": "^9.0.0",
     "@ng-bootstrap/ng-bootstrap": "^5.0.0",
     "bootstrap": "^4.0.0",
     "@nicky-lenaers/ngx-scroll-to": "^3.0.1"
