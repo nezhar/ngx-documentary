@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build_library": "ng build documentary --prod",
+    "build_docs": "ng build documentary-demo --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
