@@ -22,7 +22,7 @@
     "@angular/platform-browser": "^9.0.0",
     "@angular/platform-browser-dynamic": "^9.0.0",
     "@angular/router": "^9.0.0",
-    "@microsoft/tsdoc": "^0.12.18",
+    "@microsoft/tsdoc": "^0.12.19",
     "@ng-bootstrap/ng-bootstrap": "^5.3.0",
     "@ngx-prism/core": "^2.0.1",
     "@nicky-lenaers/ngx-scroll-to": "^3.0.1",
