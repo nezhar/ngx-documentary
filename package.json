@@ -31,7 +31,7 @@
     "core-js": "^3.6.4",
     "file-system": "^2.2.2",
     "lodash-es": "^4.17.15",
-    "prismjs": "^1.19.0",
+    "prismjs": "^1.20.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.11.1",
     "typedoc": "^0.16.11",
