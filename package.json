@@ -30,7 +30,7 @@
     "bootstrap": "^4.5.3",
     "core-js": "^3.8.1",
     "file-system": "^2.2.2",
-    "lodash-es": "^4.17.15",
+    "lodash-es": "^4.17.20",
     "prismjs": "^1.22.0",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.3",
