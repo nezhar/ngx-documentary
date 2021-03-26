@@ -34,7 +34,7 @@
     "prismjs": "^1.23.0",
     "rxjs": "~6.6.6",
     "tslib": "^2.1.0",
-    "typedoc": "^0.20.33",
+    "typedoc": "^0.20.34",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
