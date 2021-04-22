@@ -28,7 +28,7 @@
     "@nicky-lenaers/ngx-scroll-to": "^9.0.0",
     "@types/prismjs": "^1.16.5",
     "bootstrap": "^4.6.0",
-    "core-js": "^3.10.1",
+    "core-js": "^3.10.2",
     "file-system": "^2.2.2",
     "lodash-es": "^4.17.21",
     "prismjs": "^1.23.0",
